@@ -1,5 +1,7 @@
+$flaticon-font: "flaticon";
+
 @font-face {
-    font-family: "flaticon";
+    font-family: $flaticon-font;
     src: url("./flaticon.ttf?7ecca773380623aac2649a7edcc0a3f2") format("truetype"),
 url("./flaticon.woff?7ecca773380623aac2649a7edcc0a3f2") format("woff"),
 url("./flaticon.woff2?7ecca773380623aac2649a7edcc0a3f2") format("woff2"),
@@ -18,33 +20,46 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
+$flaticon-map: (
+    "security-system": "\f101",
+    "cctv": "\f102",
+    "socket": "\f103",
+    "setup": "\f104",
+    "surveillance": "\f105",
+    "recorder": "\f106",
+    "wireless": "\f107",
+    "ip-camera": "\f108",
+    "double": "\f109",
+    "camera": "\f10a",
+);
+
 .flaticon-security-system:before {
-    content: "\f101";
+    content: map-get($flaticon-map, "security-system");
 }
 .flaticon-cctv:before {
-    content: "\f102";
+    content: map-get($flaticon-map, "cctv");
 }
 .flaticon-socket:before {
-    content: "\f103";
+    content: map-get($flaticon-map, "socket");
 }
 .flaticon-setup:before {
-    content: "\f104";
+    content: map-get($flaticon-map, "setup");
 }
 .flaticon-surveillance:before {
-    content: "\f105";
+    content: map-get($flaticon-map, "surveillance");
 }
 .flaticon-recorder:before {
-    content: "\f106";
+    content: map-get($flaticon-map, "recorder");
 }
 .flaticon-wireless:before {
-    content: "\f107";
+    content: map-get($flaticon-map, "wireless");
 }
 .flaticon-ip-camera:before {
-    content: "\f108";
+    content: map-get($flaticon-map, "ip-camera");
 }
 .flaticon-double:before {
-    content: "\f109";
+    content: map-get($flaticon-map, "double");
 }
 .flaticon-camera:before {
-    content: "\f10a";
+    content: map-get($flaticon-map, "camera");
 }
