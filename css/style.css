@@ -281,8 +281,14 @@ h6,
     border-color: transparent #D34351 #D34351 transparent;
     z-index: -1;
 }
+.service-images{
+    width: 300px;
+}
 @media (max-width:1280px){
     .nav-logo{
         display: none;
+    }
+    .service-images{
+        width: 230px;
     }
 }
